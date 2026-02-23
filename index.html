@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="./tailwind.css">
+</head>
+<body class="bg-gray-200">
+    <!-- Header Section -->
+    <header class="w-[80%] mx-auto">
+        <h1 class="font-bold text-6xl my-8">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-10 font-medium text-2xl">
+            <div class="px-4 py-2 rounded-md bg-white">
+                <p>Total</p>
+                <p id="total">8</p>
+            </div>
+            <div class="px-4 py-2 rounded-md bg-white">
+                <p>Interview</p>
+                <p class="text-green-500" id="interviewCount">0</p>
+            </div>
+            <div class="px-4 py-2 rounded-md bg-white">
+                <p>Rejected</p>
+                <p class="text-red-500" id="rejectedCount">0</p>
+            </div>
+        </div>
+    </header>
+    <!-- Main Section -->
+<main class="w-[80%] mx-auto my-10">
+    <section id="job-ad">
+        <div class="flex justify-between">
+        <h1 class="font-bold text-3xl">Available Jobs</h1>
+        <p id="available" class="text-2xl">8 jobs</p>
+    </div>
+    <div class="gap-2 py-10 font-semibold ">
+        <button id="all-Menu" class="bg-blue-500 text-white shadow-gray-500 px-8 py-1 rounded-md">All</button>      
+        <button id="int-Menu" class=" shadow-gray-500 px-8 py-1 rounded-md">Interview</button>      
+        <button id="rej-Menu" class=" shadow-gray-500 px-8 py-1 rounded-md">Rejected</button>      
+    </div>
+    </section>
+    
+    <!-- Cards Section -->
+    <section id="allCards">
+    <!-- Card-1 -->
+    <div id="card-1" class="relative bg-white rounded-xl my-5 py-4 px-8">
+        <div >
+            <h1 class="font-bold text-2xl ">Mobile First  Crop</h1>
+            <p>React Native Developer</p>
+        </div>
+        <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div class="flex my-4">
+            <p>Remote</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$130000-$175000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Build cross-platform mobile apllications using React Native. Work on product used by milions of users worldwide.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+    <!-- Card-2 -->
+     <div id="card-2" class="relative bg-white rounded-xl my-5 py-4 px-8">
+        <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">WebFlow Agency</h1>
+            <p>Web Designer & Developer</p>
+        </div>
+        <div class="flex my-4">
+            <p>Los Angels, CA</p>   
+            <p class="mx-5">•&emsp;Part Time</p>   
+            <p>•&emsp;$80000-$120000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Create dtunning web experiences for high profile clients. Must have portfolio and experince with modern web design trends.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+    <!-- Card-3 -->
+    <div id="card-3" class="relative bg-white rounded-xl my-5 py-4 px-8">
+        <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">DataViz Solution</h1>
+            <p>Data Visualized Specialist</p>
+        </div>
+        <div class="flex my-4">
+            <p>Boston, MA</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$125000-$165000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Transform complex data into compelling visualization. D3.js, React and strong analytical thinking.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+ <!-- Card-4  -->
+  <div id="card-4" class="relative bg-white rounded-xl my-5 py-4 px-8">
+    <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">CloudFirst Inc</h1>
+            <p>Backend Developer</p>
+        </div>
+        <div class="flex my-4">
+            <p>Seattle, WA</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$140000-$190000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Desig and maintain scalable backend system using Python and AWS. Work with modern DevOps practices and cloud infrustructure.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+  <!-- Card-5 -->
+   <div id="card-5" class="relative bg-white rounded-xl my-5 py-4 px-8">
+    <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">Innovation Labs</h1>
+            <p>UI/UX Engineer</p>
+        </div>
+        <div class="flex my-4">
+            <p>Austin, TX</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp; • $110,000 - $150,000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise requir</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+   <!-- Card-6 -->
+    <div id="card-6" class="relative bg-white rounded-xl my-5 py-4 px-8">
+        <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">MegaCorp Solutions</h1>
+            <p>JavaScript Developer</p>
+        </div>
+        <div class="flex my-4">
+            <p>New York, NY</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$130000-$170000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+    <!-- Card-7 -->
+     <div id="card-7" class="relative bg-white rounded-xl my-5 py-4 px-8">
+       <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">StartupXYZ</h1>
+            <p>Full Stack Engineer</p>
+        </div>
+        <div class="flex my-4">
+            <p>Remote</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$120000-$160000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+     <!-- Card-8 -->
+      <div id="card-8" class="relative bg-white rounded-xl my-5 py-4 px-8">
+        <button class="del-btn bg-red-500 absolute top-3 right-3 text-white font-semibold rounded-md px-3 py-1">Delete</button>
+        <div >
+            <h1 class="font-bold text-2xl ">TechCorp Industries</h1>
+            <p>Senior Frontend Developer</p>
+        </div>
+        <div class="flex my-4">
+            <p>San Francisco, CA</p>   
+            <p class="mx-5">•&emsp;Full Time</p>   
+            <p>•&emsp;$130000-$175000</p>   
+        </div>
+        <div>
+            <button class="bg-gray-300 px-4 py-2 font-semibold rounded-md">NOT APPLIED</button>
+            <p class="py-2">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+        </div>
+        <div class="space-x-2 my-4">
+            <button class="int-btn border rounded-md px-4 py-1 font-semibold border-green-500 text-green-500 shadow shadow-gray-500">INTERVIEW</button>
+            <button class="rej-btn border rounded-md px-4 py-1 font-semibold border-red-500 text-red-500 shadow shadow-gray-500">REJECTED</button>
+        </div>
+    </div>
+    </section>
+</main>
+
+<section id="emptyMessage" class="hidden flex flex-col justify-center items-center bg-white rounded-xl border border-gray-300 w-[80%] mx-auto mb-10 h-96">
+    <img src="./jobs.png" alt="" class="w-12">
+    <h3 class="text-2xl font-semibold text-gray-500">No Jobs Available</h3>
+    <h3 class="font-light text-gray-400">Check back soon for new job opportunities</h3>
+</section>
+    <script src="chatscript.js"></script>
+</body>
+</html>
