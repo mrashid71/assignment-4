@@ -72,3 +72,47 @@ rejMenu.onclick = function () {
   jobsCountText.innerText = count + " jobs";
   checkEmpty(count);
 };
+
+// INTERVIEW BUTTONS
+function initStatusButtons() {
+  const interviewButtons = document.getElementsByClassName("int-btn");
+  const rejectedButtons = document.getElementsByClassName("rej-btn");
+
+  for (let btn of interviewButtons) {
+    btn.onclick = function () {
+      const card = this.closest("div[id^='card-']");
+      const statusBtn = card.querySelector("div:nth-child(4) > button");
+      
+      card.dataset.status = "interview";
+      statusBtn.innerText = "INTERVIEW";
+      statusBtn.classList.remove("bg-gray-300", "bg-red-500");
+      statusBtn.classList.add("bg-green-500", "text-white");
+      updateCounts();
+    };
+  }
+
+  for (let btn of rejectedButtons) {
+    btn.onclick = function () {
+      const card = this.closest("div[id^='card-']");
+      const statusBtn = card.querySelector("div:nth-child(4) > button");
+
+      card.dataset.status = "rejected";
+      statusBtn.innerText = "REJECTED";
+      statusBtn.classList.remove("bg-gray-300", "bg-green-500");
+      statusBtn.classList.add("bg-red-500", "text-white");
+      updateCounts();
+    };
+  }
+}
+
+// DELETE BUTTONS
+function initDeleteButtons() {
+  const delButtons = document.getElementsByClassName("del-btn");
+  for (let btn of delButtons) {
+    btn.onclick = function () {
+      const card = this.closest("div[id^='card-']");
+      card.remove(); // permanently delete
+      updateCounts();
+    };
+  }
+}
