@@ -38,3 +38,37 @@ function updateCounts() {
   document.getElementById("interviewCount").innerText = interviewCount;
   document.getElementById("rejectedCount").innerText = rejectedCount;
 }
+
+// FILTER BUTTONS
+allMenu.onclick = function () {
+  setActive(allMenu);
+  cards.forEach(card => card.style.display = "block");
+  updateCounts();
+  emptyMessage.classList.add("hidden");
+};
+
+intMenu.onclick = function () {
+  setActive(intMenu);
+  let count = 0;
+  cards.forEach(card => {
+    if (card.dataset.status === "interview") {
+      card.style.display = "block";
+      count++;
+    } else card.style.display = "none";
+  });
+  jobsCountText.innerText = count + " jobs";
+  checkEmpty(count);
+};
+
+rejMenu.onclick = function () {
+  setActive(rejMenu);
+  let count = 0;
+  cards.forEach(card => {
+    if (card.dataset.status === "rejected") {
+      card.style.display = "block";
+      count++;
+    } else card.style.display = "none";
+  });
+  jobsCountText.innerText = count + " jobs";
+  checkEmpty(count);
+};
