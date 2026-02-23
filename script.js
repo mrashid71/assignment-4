@@ -13,3 +13,11 @@ function setActive(button) {
   rejMenu.classList.remove("bg-blue-500", "text-white");
   button.classList.add("bg-blue-500", "text-white");
 }
+
+function checkEmpty(count) {
+  if (count === 0) {
+    emptyMessage.classList.remove("hidden");
+  } else {
+    emptyMessage.classList.add("hidden");
+  }
+}
