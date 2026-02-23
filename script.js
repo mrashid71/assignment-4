@@ -116,3 +116,8 @@ function initDeleteButtons() {
     };
   }
 }
+
+// INITIALIZE
+initStatusButtons();
+initDeleteButtons();
+updateCounts();
